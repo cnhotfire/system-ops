@@ -35,10 +35,12 @@ screen -S "$SCREEN_NAME" -dm bash -c '
   echo "🚀 启动升级流程到 Ubuntu 24.04..."
   sudo do-release-upgrade -f DistUpgradeViewNonInteractive -d
 
-  echo "✅ 升级命令已执行，请稍候自动重启并验证版本。"
+  echo ""
+  echo "⚠️  请在 screen 中手动执行：sudo do-release-upgrade"
+  echo "💡  或使用非交互方式：sudo do-release-upgrade -f DistUpgradeViewNonInteractive -d"
   exec bash
 '
 
-echo "✅ 升级脚本已在 screen 中启动。"
-echo "👉 使用以下命令进入会话查看进度："
+echo "✅ 准备工作已完成，升级环境已在 screen 中启动。"
+echo "👉 请输入以下命令进入 screen 并开始升级："
 echo "    screen -r $SCREEN_NAME"
