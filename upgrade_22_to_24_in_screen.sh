@@ -30,7 +30,7 @@ screen -S "$SCREEN_NAME" -dm bash -c '
   sudo apt install -y update-manager-core
 
   echo "🔧 修改配置以允许 LTS 升级..."
-  sudo sed -i \"s/^Prompt=.*/Prompt=lts/\" /etc/update-manager/release-upgrades
+  sudo sed -i "s/^Prompt=.*/Prompt=lts/" /etc/update-manager/release-upgrades
 
   echo "🚀 启动升级流程到 Ubuntu 24.04..."
   sudo do-release-upgrade -f DistUpgradeViewNonInteractive -d
