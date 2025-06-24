@@ -46,8 +46,8 @@ screen -S "$SCREEN_NAME" -dm bash -c '
     echo "     在SSH环境下升级存在风险，建议保持会话活跃[4](@ref)"
     echo "-----------------------------------------------------"
     
-    # 执行实际升级
-    sudo do-release-upgrade
+    # 执行实际升级, 静默操作
+    sudo do-release-upgrade -f DistUpgradeViewNonInteractive -d
     
     echo ""
     echo "✅ 升级完成！请确认升级结果："
